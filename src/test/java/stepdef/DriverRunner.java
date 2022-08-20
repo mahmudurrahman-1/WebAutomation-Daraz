@@ -10,12 +10,14 @@ import java.util.Properties;
 
 public class DriverRunner extends BaseDriver {
     Properties prop = PropertiesParser.loadProperties("basedriver.properties");
+
     @Before
-    public void startUp(){
-        driver=initializeDriver(prop.getProperty("br1"));
+    public void startUp() {
+        driver = initializeDriver(prop.getProperty("br1"));
     }
+
     @After
-    public void tearDown(){
+    public void tearDown() {
         PageDriver.getCurrentDriver().quit();
     }
 }
