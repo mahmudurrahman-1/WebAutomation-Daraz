@@ -1,13 +1,10 @@
 Feature: Login Module
 
-  Background: Login with invalid credentials
-    Given goto daraz website and click SIGNUP/lOGIN button from the navigation
-    When give "email" and "password" to login
-    Then show incorrect result
+  Scenario: John open the site and Login
+    Given John on home page after opening open site
+    And John clicks SIGNUP/lOGIN button from the Nav bar
+    When John enters "email" and "password"
+    Then Jhon successfully Login
 
-  Scenario: Login with valid credentials
-    Given refresh page
-    When give valid "email" and "password"
-    Then successfully login
 
 
