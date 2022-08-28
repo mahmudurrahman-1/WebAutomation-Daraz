@@ -18,14 +18,11 @@
 > |sheetname|rowNum|   
 > |sheet1   |0     |
 
-> *_Feature_*: Login Module  
-
-When John enters "email" and "password" to input fields
-Then John successfully Login
-**Scenario:** John opens the site and Login
-> **_Given_** John on homepage after opening open site
-> **_And_** John clicks SIGNUP/lOGIN button from the Nav bar
-> **_When_** John enters "email" and "password" to input fields
+> *_Feature_*: Login Module
+**Scenario:** John opens the site and Login   
+> **_Given_** John on homepage after opening open site  
+> **_And_** John clicks SIGNUP/lOGIN button from the Nav bar    
+> **_When_** John enters "email" and "password" to input fields   
 > **_Then_** John successfully Login
 
 > *Scenario*: Login with valid credentials 
