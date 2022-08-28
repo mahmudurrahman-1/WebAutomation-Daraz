@@ -26,7 +26,7 @@
 > **_When_** John enters "email" and "password" to input fields   
 > **_Then_** John successfully Login
 
-> *Scenario*: Search with valid credentials
+> *Scenario*: Search with valid credentials   
 > **_Given_**   
 > **_When_**  
 > **_Then_** 
