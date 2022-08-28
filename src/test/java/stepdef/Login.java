@@ -27,9 +27,11 @@ public class Login {
     }
 
     @When("^John enters \"([^\"]*)\" and \"([^\"]*)\" to input fields$")
-    public void LoginHandler() throws IOException, InvalidFormatException {
-        loginpage.waitForPageLoad();
-        loginpage.HandleLogin();
+    public void LoginHandler(String em, String pass) throws IOException, InvalidFormatException {
+        if (em.contains("email") && pass.contains("password")) {
+            loginpage.waitForPageLoad();
+            loginpage.HandleLogin();
+        }
     }
     @Then("^John successfully Login$")
     public void ConfirmLogin(){
