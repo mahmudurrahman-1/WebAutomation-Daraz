@@ -20,9 +20,8 @@ public class LoginPage extends CommonMethods {
     WebElement submit;
 
     //Actions
-    //input valid credentials
-    public void HandleLogin
-    (String email, String password) {
+    //Login handler
+    public void HandleLogin(String email, String password) {
         sendText(inputEmail, email);
         sendText(inputPassword, password);
     }
