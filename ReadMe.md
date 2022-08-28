@@ -19,17 +19,17 @@
 > |sheet1   |0     |
 
 > *_Feature_*: Login Module
+
 **Scenario:** John opens the site and Login   
 > **_Given_** John on homepage after opening open site  
 > **_And_** John clicks SIGNUP/lOGIN button from the Nav bar    
 > **_When_** John enters "email" and "password" to input fields   
 > **_Then_** John successfully Login
 
-> *Scenario*: Login with valid credentials 
-> 
-> **_Given_** refresh page  
-> **_When_** give valid "email" and "password"  
-> **_Then_** successfully login  
+> *Scenario*: Search with valid credentials
+> **_Given_**   
+> **_When_**  
+> **_Then_** 
 
 2. Please include any third party test reporting tools(Ex. Extent Report, Allure report) in your automation project.
 3. Please use Excel/csv file as external test data provider and your automation script have the ability to read and
