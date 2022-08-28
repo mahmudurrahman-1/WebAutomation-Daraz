@@ -25,7 +25,7 @@ And John clicks SIGNUP/lOGIN button from the Nav bar
 When John enters "email" and "password" to input fields
 Then John successfully Login
 **Scenario:** John opens the site and Login
-> **_Given_** goto daraz website and click SIGNUP/lOGIN button from the navigation
+> **_Given_** John on homepage after opening open site
 > **_When_** give "email" and "password" to login
 > **_Then_** show incorrect result
 
