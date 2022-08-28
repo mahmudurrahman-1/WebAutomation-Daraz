@@ -20,13 +20,12 @@
 
 > *_Feature_*: Login Module  
 
-And John clicks SIGNUP/lOGIN button from the Nav bar
 When John enters "email" and "password" to input fields
 Then John successfully Login
 **Scenario:** John opens the site and Login
 > **_Given_** John on homepage after opening open site
 > **_And_** John clicks SIGNUP/lOGIN button from the Nav bar
-> **_When_** give "email" and "password" to login
+> **_When_** John enters "email" and "password" to input fields
 > **_Then_** show incorrect result
 
 > *Scenario*: Login with valid credentials 
