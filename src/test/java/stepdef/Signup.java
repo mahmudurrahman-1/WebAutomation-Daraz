@@ -1,6 +1,7 @@
 package stepdef;
 
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,16 +24,29 @@ public class Signup {
 
 
     //Actions
-    @Given("^goto registration page$")
-    public void gotoLoginPage() throws InterruptedException {
-        homePage.waitForPageLoad();
+    @Given("^John on home page after opening open site$")
+    public void HomePageStarts() throws InterruptedException {
+
         homePage.signuporlogin();
-        registration.waitForPageLoad();
-        registration.selectRegistration();
-        registration.setWithEmail();
     }
 
-    @When("^enter (.+) and (.+)$")
+    @And("^Jogn click Signup/Login button to go Login in page$")
+    public void gotoLoginPage() throws InterruptedException {
+
+        homePage.signuporlogin();
+    }
+    @And("^John clicks register and goes registration page$")
+    public void clickRegister() throws InterruptedException {
+
+        registration.waitForPageLoad();
+        registration.selectRegistration();
+    }
+
+    @When("^John decides to registration with email$")
+    public void SelectRegister() throws InterruptedException {
+        registration.setWithEmail();
+    }
+    @And("^John enters (.+) and (.+) to exact values$")
     public void HandleRegistation(String sheetname, int row) throws InterruptedException, IOException, InvalidFormatException {
         String email, fullName, password;int month, day, year, gender;
         List<Map<String, String>> testdata = reader.getData("src/main/resources/information.xlsx", sheetname);
@@ -45,8 +59,8 @@ public class Signup {
         gender = parseInt(testdata.get(row).get("gender"));
 
         registration.setRegistration(email, fullName, password, month, day, year, gender);
-        Thread.sleep(7000);
-        registration.dragSlider();
+
+
     }
 
     @Then("^Successfully registered$")

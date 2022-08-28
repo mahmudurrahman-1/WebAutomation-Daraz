@@ -6,11 +6,14 @@
 
 >*_Feature_*: Registration Module
 
-**Scenario Outine:** Registration with valid inputs
+**Scenario Outine:** John goes to the site and does registration
 
-> **_Given:_** goto registration page  
-> **_When:_** enter "sheetName" and "rowNum"  
-> **_Then:_** Successfully registered  
+> **_Given_** John on home page after opening open site   
+> **_And_** Jogn click Signup/Login button to go Login in page  
+> **_And_** John clicks register and goes registration page  
+> **_When_** John decides to registration with email  
+> **_And_** John enters <sheetName> and <rowNum> to exact values  
+> **_Then_** Successfully registered  
 > **_Examples_**  
 > |sheetname|rowNum|   
 > |sheet1   |0     |

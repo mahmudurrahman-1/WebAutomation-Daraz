@@ -39,10 +39,15 @@ public class RegistrationPage extends CommonMethods {
     List<WebElement> nmi;
     @FindBy(id = "month")
     WebElement selectMonth;
+
     @FindBy(id = "day")
     WebElement selectDay;
+    @FindBy(css = "li[value='29']")
+    WebElement clickDay;
     @FindBy(id = "year")
     WebElement selectYear;
+    @FindBy(css = "li[value='1996']")
+    WebElement clickYear;
     @FindBy(id = "gender")
     WebElement selectGender;
     @FindBy(xpath = "//button[text()='SIGN UP']")
@@ -60,23 +65,28 @@ public class RegistrationPage extends CommonMethods {
     }
 
     //drag to verify
-    public void dragSlider() {
-        sliderMove(dragIt);
-    }
+//    public void dragSlider() {
+//        sliderMove(dragIt);
+//    }
 
     //input everything
     public void setRegistration(String email, String fullName, String password, int month, int day, int year, int gender) throws InterruptedException {
+
         sendText(inputEmail.get(0), email);
-        sendText(inputName.get(3), fullName);
-        sendText(inputPassword.get(2), password);
+        sliderMove(dragIt);
+        Thread.sleep(20000);
+        sendText(inputName.get(2), fullName);
+        sendText(inputPassword.get(1), password);
         selectMonth.click();
         nmi.get(month).click();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         selectDay.click();
-        nmi.get(day).click();
-        Thread.sleep(2000);
+        scrollToElement(clickDay);
+        clickDay.click();
+        Thread.sleep(3000);
         selectYear.click();
-        nmi.get(year).click();
+        scrollToElement(clickYear);
+        clickYear.click();
         Thread.sleep(2000);
         selectGender.click();
         nmi.get(gender).click();
