@@ -19,13 +19,13 @@
 > |sheet1   |0     |
 
 > *_Feature_*: Login Module  
-Scenario: John open the site and Login
-Given John on homepage after opening open site
+
 And John clicks SIGNUP/lOGIN button from the Nav bar
 When John enters "email" and "password" to input fields
 Then John successfully Login
 **Scenario:** John opens the site and Login
 > **_Given_** John on homepage after opening open site
+> **_And_** John clicks SIGNUP/lOGIN button from the Nav bar
 > **_When_** give "email" and "password" to login
 > **_Then_** show incorrect result
 
